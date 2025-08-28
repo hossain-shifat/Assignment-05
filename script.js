@@ -88,8 +88,13 @@ callBtn.forEach(button =>{
 
         //  get current time
         const currentTime = new Date()
-        const currentLocaleTime = currentTime.toLocaleTimeString()
+        let hours = currentTime.getHours()
+        let minutes = currentTime.getMinutes()
+        let seconds = currentTime.getSeconds()
 
+        hours = hours % 12 || 12
+
+        const currentLocaleTime = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
 
         //adding the time in call history section
         const time = document.createElement("h1")
