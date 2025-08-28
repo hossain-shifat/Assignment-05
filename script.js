@@ -1,3 +1,18 @@
+// heart incearing functionality
+
+const heartIcon = document.querySelectorAll(".heart-icon")
+const heartCount = document.getElementById("heart-count")
+
+heartIcon.forEach(button =>{
+    button.addEventListener("click",function(){
+        const heartCountNum = parseInt(heartCount.innerText)
+        heartCount.innerText = heartCountNum + 1
+
+    })
+})
+
+
+
 // copy functionality
 const copyBtn = document.querySelectorAll(".copy-btn")
 const copyCount = document.getElementById("copy-count")
