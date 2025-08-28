@@ -110,4 +110,10 @@ callBtn.forEach(button =>{
 })
 
 
+// clear button functionality
 
+const clearBtn = document.getElementById("clear-btn")
+
+clearBtn.addEventListener("click",function () {
+    callingDetailContainerMain.innerHTML = ""
+})
