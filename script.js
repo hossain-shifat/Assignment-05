@@ -24,7 +24,7 @@ const coinCount = document.getElementById("coin-count")
 callBtn.forEach(button =>{
     button.addEventListener("click",function(){
         const card = button.closest(".card");
-        const subtitle = card.querySelector(".subtitle").innerText
+        const subtitle = card.querySelector("p").innerText
         const serviceNum = card.querySelector(".number").innerText
 
         // checking the balence
