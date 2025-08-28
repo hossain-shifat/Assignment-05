@@ -67,7 +67,7 @@ callBtn.forEach(button =>{
 
         //calling detail parent
         const callingDetailDiv = document.createElement("div")
-        callingDetailDiv.id = "calling-detail"
+
 
         //adding the call title in call history section
         const callTitle = document.createElement("p")
@@ -83,7 +83,7 @@ callBtn.forEach(button =>{
 
         // time div
         const callingTimeDiv = document.createElement("div")
-        callingDetailDiv.id = "calling-time"
+
 
 
         //  get current time
@@ -115,5 +115,5 @@ callBtn.forEach(button =>{
 const clearBtn = document.getElementById("clear-btn")
 
 clearBtn.addEventListener("click",function () {
-    callingDetailContainerMain.innerHTML = ""
+    callingDetailContainerMain.innerHTML = "";
 })
