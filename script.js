@@ -1,5 +1,6 @@
 // copy functionality
 const copyBtn = document.querySelectorAll(".copy-btn")
+const copyCount = document.getElementById("copy-count")
 
 copyBtn.forEach(button =>{
     button.addEventListener("click",function(){
@@ -9,6 +10,11 @@ copyBtn.forEach(button =>{
         // cpoy inner text
         navigator.clipboard.writeText(copyInnerText).then(function() {
             alert(`Copied number: ${copyInnerText}`)
+            const copyCountNum = parseInt(copyCount.innerText)
+            copyCount.innerText = copyCountNum + 1
         })
     })
 })
+
+
+
