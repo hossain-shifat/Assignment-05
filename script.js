@@ -77,7 +77,7 @@ callBtn.forEach(button =>{
 
         //adding the number in call history section
         const callNum = document.createElement("h2")
-        callNum.className = "text-xl md:text-[1.25rem] font-bold py-2 number"
+        callNum.className = "text-xl md:text-[1.3rem] font-bold py-2 number"
         callNum.innerText = serviceNum
         callingDetailDiv.appendChild(callNum)
 
@@ -92,7 +92,7 @@ callBtn.forEach(button =>{
 
         //adding the time in call history section
         const time = document.createElement("h1")
-        time.className = "text-[#5C5C5C] text-[1.1rem] font-[Roboto]"
+        time.className = "text-[#5C5C5C] text-[1rem] font-[Roboto]"
         time.innerText = currentLocaleTime
         callingTimeDiv.appendChild(time)
 
