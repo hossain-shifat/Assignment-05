@@ -71,13 +71,13 @@ callBtn.forEach(button =>{
 
         //adding the call title in call history section
         const callTitle = document.createElement("p")
-        callTitle.className = "text-[1.1rem] font-semibold md:font-medium font-[Inter]"
+        callTitle.className = "text-[1rem] font-semibold md:font-medium font-[Inter]"
         callTitle.innerText = subtitle
         callingDetailDiv.appendChild(callTitle)
 
         //adding the number in call history section
         const callNum = document.createElement("h2")
-        callNum.className = "text-xl md:text-[1.3rem] font-bold py-2 number"
+        callNum.className = "text-xl md:text-[1.1rem] font-bold py-2 number"
         callNum.innerText = serviceNum
         callingDetailDiv.appendChild(callNum)
 
