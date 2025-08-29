@@ -92,7 +92,7 @@ callBtn.forEach(button =>{
 
         //adding the time in call history section
         const time = document.createElement("h1")
-        time.className = "text-[#5C5C5C] text-[1rem] font-[Roboto]"
+        time.className = "text-[#5C5C5C] text-[1rem] font-[Inter]"
         time.innerText = currentLocaleTime
         callingTimeDiv.appendChild(time)
 
