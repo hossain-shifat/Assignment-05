@@ -47,8 +47,8 @@ callBtn.forEach(button =>{
         const serviceNum = card.querySelector(".number").innerText
 
         // checking the balence
-        if (parseInt(coinCount.innerText)===0) {
-            alert("Insufficient Balance")
+        if (parseInt(coinCount.innerText) === 0 || parseInt(coinCount.innerText) < 20) {
+            alert("Insufficient Balance. Minimum of 20 coins is required to make a call")
             return
         }
 
@@ -63,7 +63,7 @@ callBtn.forEach(button =>{
 
 
         const callingDetailContainer = document.createElement("div")
-        callingDetailContainer.className = "flex justify-between items-center my-2"
+        callingDetailContainer.className = "flex justify-between items-center my-2 bg-[#FAFAFA] p-3 rounded-[12px]"
 
         //calling detail parent
         const callingDetailDiv = document.createElement("div")
@@ -71,7 +71,7 @@ callBtn.forEach(button =>{
 
         //adding the call title in call history section
         const callTitle = document.createElement("p")
-        callTitle.className = "text-[#5C5C5C] text-[1.1rem]"
+        callTitle.className = "text-[1.1rem] font-semibold md:font-medium font-[Inter]"
         callTitle.innerText = subtitle
         callingDetailDiv.appendChild(callTitle)
 
@@ -88,13 +88,7 @@ callBtn.forEach(button =>{
 
         //  get current time
         const currentTime = new Date()
-        let hours = currentTime.getHours()
-        let minutes = currentTime.getMinutes()
-        let seconds = currentTime.getSeconds()
-
-        hours = hours % 12 || 12
-
-        const currentLocaleTime = `${hours.toString().padStart(2,'0')}:${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+        const currentLocaleTime = currentTime.toLocaleTimeString()
 
         //adding the time in call history section
         const time = document.createElement("h1")
